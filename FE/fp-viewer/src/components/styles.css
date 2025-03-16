@@ -1,0 +1,190 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.control-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(0, 58, 64, 0.9);
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+}
+
+/* Buttons */
+button {
+    all: unset;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #003A40;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #53C4CA;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover, .active {
+    background-color: white;
+    color: #53C4CA;
+    border-color: white;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .control-panel {
+        max-width: 90%;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 760px) {
+    .control-panel {
+        flex-direction: row;
+        gap: 8px;
+        width: auto;
+        bottom: 15px;
+        padding: 8px;
+    }
+
+    button {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .MuiSlider-root {
+        width: 250px !important;
+    }
+}
+
+/* TlogUploader.css - Themed with Picture Color Scheme */
+
+.uploader-container {
+    padding: 24px;
+    background-color: #e0f2f7; /* Light Blue Background */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    width: 100%;
+    margin: 40px auto;
+    border: 2px solid #53C4CA; /* Teal Border */
+}
+
+.uploader-header {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #003A40; /* Dark Teal Text */
+    margin-bottom: 16px;
+}
+
+.file-drop-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #53C4CA; /* Teal Dashed Border */
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    background-color: #d1e9ef; /* Slightly darker light blue for hover effect */
+}
+
+.file-drop-area p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.file-drop-area .file-name {
+    color: #4a5568; /* Grayish Text for File Name */
+}
+
+.file-drop-area .placeholder-text {
+    color: #718096; /* Light Gray Text for Placeholder */
+}
+
+.upload-button {
+    width: 100%;
+    background-color: #003A40; /* Dark Teal Button */
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border: 2px solid #53C4CA; /* Teal Border */
+}
+
+.upload-button:hover, .upload-button:focus {
+    background-color: #53C4CA; /* Light Teal Hover */
+    color: white;
+    border-color: #53C4CA;
+}
+
+.upload-button:disabled {
+    background-color: #a0aec0; /* Gray Disabled Button */
+    border-color: #a0aec0;
+    color: #f7fafc; /* Light Text on Disabled Button */
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.loading-spinner .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #003A40; /* Dark Teal Spinner */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+
+.upload-message {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #4a5568; /* Grayish Text for Message */
+    text-align: center;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
