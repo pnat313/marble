@@ -65,44 +65,6 @@ def parse_tlog(file_path):
     
     return flight_data
 
-def estimate_flight_duration(tlog_filepath):
-    """
-    Estimates the total flight duration in minutes from a MAVLink tlog file.
-    """
-    try:
-        mlog = mavutil.mavlink_connection(tlog_filepath)
-
-        start_time = None
-        end_time = None
-
-        while True:
-            msg = mlog.recv_match(blocking=False)
-            if not msg:
-                break
-
-            if msg.get_type() == "HEARTBEAT":
-                if msg.system_status == mavutil.mavlink.MAV_STATE_ACTIVE and start_time is None:
-                    start_time = msg._timestamp
-                elif msg.system_status == mavutil.mavlink.MAV_STATE_STANDBY:
-                    end_time = msg._timestamp
-
-            elif msg.get_type() == "COMMAND_ACK" and msg.command == mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM:
-                if msg.result == mavutil.mavlink.MAV_RESULT_ACCEPTED:
-                    if msg.param1 == 1.0 and start_time is None:
-                        start_time = msg._timestamp
-                    elif msg.param1 == 0.0:
-                        end_time = msg._timestamp
-
-        if start_time and end_time:
-            duration_seconds = end_time - start_time
-            duration_minutes = duration_seconds / 60.0
-            return duration_minutes
-        else:
-            return None
-
-    except Exception as e:
-        print(f"Error processing tlog file: {e}")
-        return None
 
 @app.route('/flight-data', methods=['GET'])
 def get_flight_data():
