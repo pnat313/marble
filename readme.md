@@ -1,6 +1,8 @@
 # Simple Flight Replay Player
 
 This project provides a simple flight replay player, allowing users to visualize flight data from TLOG files.
+![image](https://github.com/user-attachments/assets/e12304af-f2e9-4e01-aebd-0fb675021d3f)
+
 
 ## Overview
 
