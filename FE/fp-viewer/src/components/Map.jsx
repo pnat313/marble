@@ -20,7 +20,7 @@ function Map() {
     const [speedArray, setSpeedArray] = useState([]);
     const [headingArray, setHeadingArray] = useState([]);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [currentSpeed, setCurrentSpeed] = useState(0);
+   // const [currentSpeed, setCurrentSpeed] = useState(0);
     const speedState = useRef(1);
     const headingRef = useRef(0);
     const [isLoading, setIsLoading] = useState(true);
@@ -106,12 +106,12 @@ function Map() {
 
                         prevIndexRef.current = index;
 
-                        if (speedArray[index] !== null && speedArray[index] !== undefined) {
-                            setCurrentSpeed(speedArray[index]);
-                        }
+                        // if (speedArray[index] !== null && speedArray[index] !== undefined) {
+                        //     setCurrentSpeed(speedArray[index]);
+                        // }
 
-                        console.log(`Actual Speed (km/h): ${actualSpeed}`, index);
-                        console.log(`Track Speed (km/h) in options: ${trackInstance.current.options.speed}`);
+                        // console.log(`Actual Speed (km/h): ${actualSpeed}`, index);
+                        // console.log(`Track Speed (km/h) in options: ${trackInstance.current.options.speed}`);
 
                         if (headingArray[index] !== undefined) {
                             headingRef.current = headingArray[index];

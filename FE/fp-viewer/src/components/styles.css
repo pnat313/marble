@@ -85,24 +85,24 @@ button:hover, .active {
     }
 }
 
-/* TlogUploader.css - Themed with Picture Color Scheme */
+/* TlogUploader.css */
 
 .uploader-container {
     padding: 24px;
-    background-color: #e0f2f7; /* Light Blue Background */
+    background-color: #e0f2f7; 
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 50%;
     width: 100%;
     margin: 40px auto;
-    border: 2px solid #53C4CA; /* Teal Border */
+    border: 2px solid #53C4CA; 
 }
 
 .uploader-header {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    color: #003A40; /* Dark Teal Text */
+    color: #003A40; 
     margin-bottom: 16px;
 }
 
@@ -110,12 +110,12 @@ button:hover, .active {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px dashed #53C4CA; /* Teal Dashed Border */
+    border: 2px dashed #53C4CA; 
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 16px;
     cursor: pointer;
-    background-color: #d1e9ef; /* Slightly darker light blue for hover effect */
+    background-color: #d1e9ef;
 }
 
 .file-drop-area p {
@@ -124,16 +124,16 @@ button:hover, .active {
 }
 
 .file-drop-area .file-name {
-    color: #4a5568; /* Grayish Text for File Name */
+    color: #4a5568; 
 }
 
 .file-drop-area .placeholder-text {
-    color: #718096; /* Light Gray Text for Placeholder */
+    color: #718096; 
 }
 
 .upload-button {
     width: 100%;
-    background-color: #003A40; /* Dark Teal Button */
+    background-color: #003A40; 
     color: white;
     padding: 12px;
     border-radius: 8px;
@@ -142,19 +142,19 @@ button:hover, .active {
     font-weight: 500;
     border: none;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    border: 2px solid #53C4CA; /* Teal Border */
+    border: 2px solid #53C4CA; 
 }
 
 .upload-button:hover, .upload-button:focus {
-    background-color: #53C4CA; /* Light Teal Hover */
+    background-color: #53C4CA; 
     color: white;
     border-color: #53C4CA;
 }
 
 .upload-button:disabled {
-    background-color: #a0aec0; /* Gray Disabled Button */
+    background-color: #a0aec0; 
     border-color: #a0aec0;
-    color: #f7fafc; /* Light Text on Disabled Button */
+    color: #f7fafc; 
     cursor: not-allowed;
 }
 
@@ -165,7 +165,7 @@ button:hover, .active {
 
 .loading-spinner .spinner {
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #003A40; /* Dark Teal Spinner */
+    border-top: 4px solid #003A40;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -175,7 +175,7 @@ button:hover, .active {
 .upload-message {
     margin-top: 12px;
     font-size: 14px;
-    color: #4a5568; /* Grayish Text for Message */
+    color: #4a5568; 
     text-align: center;
 }
 

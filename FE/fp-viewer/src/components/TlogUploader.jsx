@@ -43,7 +43,7 @@ export default function TlogUploader() {
 
     // Set loading state to true before the upload starts
     setLoading(true);
-
+    // TODO - Dynamic Base URL
     try {
       const response = await fetch("http://127.0.0.1:5000/upload-tlog", {
         method: "POST",
@@ -61,13 +61,13 @@ export default function TlogUploader() {
     } catch (error) {
       setMessage("Error uploading file");
     } finally {
-      // Set loading state to false once the upload is finished
+     
       setLoading(false);
     }
   };
 
   const handleAreaClick = () => {
-    document.getElementById("file-input").click(); // Simulate file input click
+    document.getElementById("file-input").click(); 
   };
 
   return (
@@ -78,7 +78,7 @@ export default function TlogUploader() {
         className="file-drop-area"
         onDrop={handleDrop}
         onDragOver={handleDragOver}
-        onClick={handleAreaClick} // Trigger file input when the area is clicked
+        onClick={handleAreaClick} 
       >
         <input
           id="file-input"
@@ -93,7 +93,7 @@ export default function TlogUploader() {
           <p className="placeholder-text">Drag & drop a .tlog file here or click to select</p>
         )}
       </div>
-      <div style={{display:'flex', justifyContent:'center', width:"100%", flexDirection:'column', alignItems:'center'}}>
+      <div style={{ display: 'flex', justifyContent: 'center', width: "100%", flexDirection: 'column', alignItems: 'center' }}>
         <button
           onClick={handleUpload}
           className="upload-button"
