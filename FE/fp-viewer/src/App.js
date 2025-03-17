@@ -1,12 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import Map from './components/Map';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import TlogUploader from "./components/TlogUploader";
+import PolyLine from "./components/Map";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Map />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TlogUploader />} />
+        <Route path="/map" element={<PolyLine />} />
+      </Routes>
+    </Router>
   );
 }
 
