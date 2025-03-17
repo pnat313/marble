@@ -7,6 +7,7 @@ import Slider from '@mui/material/Slider';
 
 import "./styles.css";
 
+// TODO - Reimplement caching
 let flightDataCache = null; // Cache variable
 
 function Map() {
@@ -137,6 +138,7 @@ function Map() {
         speedState.current = 3;
     };
 
+    // TODO - extract seperate components 
     return (
         <div className='map-container'>
             <div ref={mapRef} className='map' />
